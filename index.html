@@ -3,26 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Scrolling Page</title>
+    <title>Fullscreen Scrollable Images</title>
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .image-container {
+            width: 100vw;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
         }
-        img {
-            width: 100%;
-            height: auto;
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-    <img src="image1.jpg" alt="Image 1">
-    <img src="image2.jpg" alt="Image 2">
-    <img src="image3.jpg" alt="Image 3">
-    <img src="image4.jpg" alt="Image 4">
+    <div class="image-container">
+        <img src="image1.jpg" alt="Image 1">
+    </div>
+    <div class="image-container">
+        <img src="image2.jpg" alt="Image 2">
+    </div>
+    <div class="image-container">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
+    <div class="image-container">
+        <img src="image4.jpg" alt="Image 4">
+    </div>
 </body>
 </html>
+
 
